@@ -1,0 +1,284 @@
+@import "./variables.scss";
+
+
+.product {
+    .main {
+        padding: 20px 0;
+
+        &__left {
+            border-right: 1px solid rgba(18, 146, 154, 0.25);
+
+            @media screen and (min-width: 768px) {
+                min-height: 850px;
+            }
+        }
+
+        .category {
+            p {
+                font-weight: 600;
+            }
+
+            ul {
+                list-style-type: none;
+
+                li {
+                    margin: 10px 0;
+                    color: $gray-color;
+
+                    input {
+                        margin-right: 10px;
+                    }
+
+                    span {
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .product-grid {
+        &__header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0 10px;
+            flex-wrap: wrap;
+
+            h3 {
+                color: $dark-color;
+                font-weight: 600;
+                font-size: 1.3em;
+            }
+
+
+            .search {
+                background-color: #F3F3F3;
+                padding: 5px;
+                border-radius: 5px;
+                border: 1px solid $main-color;
+
+                input {
+                    background: transparent;
+                    border: 0;
+                    padding: 2px;
+
+                    &:focus {
+                        box-shadow: none;
+                        border: none;
+                        outline: none;
+                    }
+
+                }
+
+                button {
+                    padding: 3px;
+                    border: none;
+                    border-left: 1px solid $main-color;
+
+                    &:focus {
+                        box-shadow: none;
+                        border: none;
+                        outline: none;
+                    }
+                }
+
+            }
+
+            @media screen and (max-width: 600px) {
+                display: block;
+
+                .search {
+                    input {
+                        width: 90%;
+                    }
+                }
+
+            }
+
+        }
+
+        .grid {
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: 10px;
+            justify-items: center;
+
+            @media screen and (max-width: 720px) {
+                padding: 10px 0;
+                grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+
+            }
+
+            .box {
+                padding: 20px 30px;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                border-radius: 5px;
+                transition: all 0.5s ease;
+
+                @media screen and (max-width: 720px) {
+                    padding: 10px 5px;
+                }
+
+                &:hover {
+                    box-shadow: 0 0 12px #0000002e;
+                    cursor: pointer;
+                }
+
+                &__name {
+                    color: $dark-color;
+                    font-weight: bold;
+                    font-size: .98em;
+                    margin-top: 25px;
+                    margin-bottom: 0;
+                }
+
+                &__picture {
+                    width: 130px;
+                    height: 100px;
+                    object-fit: cover;
+                    border-radius: 5px;
+                }
+
+                &__rating {
+                    img {
+                        width: 15px;
+                        margin: 0 2px;
+                    }
+                }
+            }
+        }
+
+        .commentBox {
+            font-size: 14px;
+
+            .previous {
+                border: 1px solid #a8a8a8;
+                border-radius: 3px;
+                min-width: 26px;
+                min-width: 26px;
+                text-align: center;
+                padding: 2px 6px;
+
+                &:hover {
+                    border: 1px solid $main-color;
+                    color: $main-color;
+                }
+
+                a {
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .next {
+                border: 1px solid #a8a8a8;
+                border-radius: 3px;
+                min-width: 26px;
+                min-width: 26px;
+                text-align: center;
+                margin-left: 8px;
+                padding: 2px 6px;
+
+                &:hover {
+                    border: 1px solid $main-color;
+                    color: $main-color;
+                }
+
+                a {
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .active {
+                color: white;
+                background-color: $main-color;
+                min-width: 26px;
+                min-width: 26px;
+                border-radius: 3px;
+                margin-left: 8px;
+                text-align: center;
+                border: none;
+
+                a {
+                    &:hover {
+                        color: white;
+                    }
+                }
+
+                &:hover {
+                    color: white;
+
+                }
+            }
+
+            .disabled {
+                color: #d9d9d9;
+                border: 1px solid #d9d9d9;
+                cursor: not-allowed;
+
+                &:hover {
+                    color: #d9d9d9;
+                    border: 1px solid #d9d9d9;
+                    cursor: not-allowed;
+
+                    a {
+                        cursor: not-allowed;
+
+                    }
+                }
+            }
+
+            .page {
+                border: 1px solid #a8a8a8;
+                border-radius: 3px;
+                min-width: 26px;
+                min-width: 26px;
+                text-align: center;
+                margin-left: 8px;
+                padding: 2px 6px;
+
+                &:hover {
+                    border: 1px solid $main-color;
+                    color: $main-color;
+                    cursor: pointer;
+                }
+
+                a {
+                    &:focus {
+                        outline: none;
+                    }
+                }
+            }
+
+            .break {
+                border-radius: 3px;
+                min-width: 26px;
+                min-width: 26px;
+                text-align: center;
+                margin-left: 8px;
+
+                &:hover {
+                    color: $main-color;
+                }
+            }
+        }
+
+        @media screen and (max-width: 720px) {
+            .pagination {
+                margin: 10px auto !important;
+                bottom: 0;
+            }
+        }
+
+    }
+
+
+}

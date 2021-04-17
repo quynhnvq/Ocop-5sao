@@ -1,0 +1,60 @@
+{
+  "name": "5-starts",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "aos": "^2.3.4",
+    "axios": "^0.21.1",
+    "bootstrap": "^4.5.0",
+    "lodash": "^4.17.21",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-alice-carousel": "^2.2.0",
+    "react-countup": "^4.3.3",
+    "react-dom": "^16.13.1",
+    "react-helmet": "^6.1.0",
+    "react-image-gallery": "^1.0.8",
+    "react-image-lightbox": "^5.1.1",
+    "react-paginate": "^7.0.0",
+    "react-player": "^2.7.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "^3.4.3",
+    "react-simple-maps": "^2.3.0",
+    "react-slick": "^0.27.13",
+    "react-tooltip": "^4.2.13",
+    "reactstrap": "^8.5.1",
+    "slick-carousel": "^1.8.1",
+    "web-vitals": "^0.2.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "reactSnap": {
+    "puppeteerArgs": [
+      "--no-sandbox",
+      "--disable-setuid-sandbox"
+    ]
+  }
+}

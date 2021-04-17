@@ -1,0 +1,316 @@
+@import "./variables.scss";
+@import "~react-image-gallery/styles/css/image-gallery.css";
+
+.detail {
+    .banner {
+        img {
+            width: 100%;
+        }
+    }
+
+    .main {
+        padding: 30px 0;
+
+        .right {
+            @media screen and (max-width: 600px) {
+                display: none;
+                visibility: hidden;
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .product {
+            background-color: #F4F4F4;
+            padding: 20px 10px;
+            border-radius: 10px;
+
+            .image {
+                &__big {
+                    border-radius: 10px;
+                    overflow: hidden;
+                    margin-bottom: 10px;
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                &__small {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    margin: 10px 0;
+
+                    img {
+                        // flex: 1;
+                        // margin: 0 5px;
+                        width: calc(25% - 5px);
+                        height: 70px;
+                        border-radius: 10px;
+                        cursor: pointer;
+                        border: 2px solid transparent;
+                        box-sizing: border-box;
+                        transition: all 0.5s ease;
+                        opacity: .8;
+
+                        &:hover,
+                        &.active {
+                            border: 2px solid $main-color;
+                            opacity: 1;
+
+                        }
+                    }
+                }
+            }
+
+            &__about {
+                .about {
+                    h1 {
+                        margin-bottom: 10px;
+                        text-transform: uppercase;
+                        font-size: 30px;
+                        font-weight: bold;
+                    }
+
+                    &__rating {
+                        img {
+                            width: 20px;
+                            margin: 0 2px;
+                        }
+                    }
+
+                    &__detail {
+                        margin-top: 20px;
+
+                        p {
+                            margin-bottom: 5px;
+                            font-size: 1.2em;
+                            
+                        }
+                        
+                    }
+
+                    &__name {
+                        font-size: 1.5em ;
+                        font-weight: bold;
+                    }
+
+                    &__value {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        .story {
+            padding: 50px 0;
+
+            .section {
+                margin: 30px 0;
+                padding: 20px;
+                background-color: #F8F8F8;
+                border-radius: 10px;
+
+                &__title {
+                    font-weight: 700;
+                    font-size: 1.5em;
+                    line-height: 1.6;
+                    border-bottom: 1px solid #12919a36;
+                }
+
+                &__content {
+                text-align: justify;
+                    p {
+                        margin-top: 20px;
+                        font-size: 1.125em;
+                        font-weight: 500;
+                        text-align: justify;
+                        .about__value {
+                            font-weight: bold;
+
+                        }
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                &.comment {
+                    .section__title {
+                        border: none;
+                    }
+
+                    .tab {
+                        list-style-type: none;
+                        display: flex;
+                        padding: 10px 0;
+                        border-bottom: 1px solid #12919a36;
+
+                        li {
+                            margin-right: 20px;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            color: #6B726B;
+                            transition: all .5s ease;
+                            border-bottom: 3px solid transparent;
+                            cursor: pointer;
+
+                            &.active {
+                                border-bottom: 3px solid $main-color;
+                                font-weight: 700;
+                                color: $dark-color;
+                            }
+
+                            &:hover {
+                                font-weight: 600;
+                            }
+                        }
+                    }
+
+                    .tab-content {
+                        .form {
+                            &__row {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: space-between;
+                                align-items: center;
+                                margin: 20px 0;
+                            }
+
+                            input {
+                                width: 48%;
+                                // flex: 1;
+                                // width: calc(100%)
+                                // margin-right: 30px;
+                                height: 50px;
+                                padding: 4px 8px;
+                                border: 1px solid $main-color;
+                                box-sizing: border-box;
+                                border-radius: 3px;
+                                font-size: 1.2em;
+                                border-radius: 5px;
+                            }
+
+                            textarea {
+                                width: 100%;
+                                border: 1px solid $main-color;
+                                box-sizing: border-box;
+                                padding: 10px;
+                                border-radius: 5px;
+                                height: 100px;
+                                font-size: 1.2em;
+                            }
+
+                            button {
+                                background-color: $main-color;
+                                color: white;
+                                text-transform: uppercase;
+                                width: 80%;
+                                max-width: 300px;
+                                padding: 8px 12px;
+                                border: none;
+                                border-radius: 10px;
+                                font-size: 1.2em;
+                                font-weight: 500;
+                            }
+                        }
+
+                        .comment-list {
+
+                            ul {
+                                list-style-type: none;
+                                padding: 10px;
+                                height: 243px;
+                                overflow-y: scroll;
+                                li {
+                                    border-bottom: 1px solid #BFBFBF;
+                                    padding: 10px 0;
+                                    margin: 10px 0;
+                                    margin-bottom: 10px;
+
+                                    p {
+                                        margin: 0;
+                                        line-height: 1.3;
+                                    }
+
+                                    .name {
+                                        font-weight: 600;
+                                        margin-bottom: 10px;
+                                    }
+
+                                    .detail {
+                                        font-size: .98em;
+                                        font-weight: 500;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.carousel {
+                    .carousel__main {
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        padding: 10px;
+                        justify-content: space-between;
+
+                        .action {
+                            // flex: 1;
+                            // width: 30px;
+                            // width
+                            margin: 0 5px;
+                            cursor: pointer;
+                            transition: all 0.5s ease;
+
+                            &:hover {
+                                transform: scale(1.15);
+                            }
+                        }
+                    }
+
+                    .carousel__big {
+                        flex: 1;
+                        border-radius: 10px;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                        }
+                    }
+
+                    .carousel__nav {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        margin: 10px 0;
+
+                        img {
+                            width: calc(100% / 4 - 5px);
+                            border-radius: 10px;
+                            // height: 60px;
+                            cursor: pointer;
+                            border: 2px solid transparent;
+                            transition: all 0.5s ease;
+                            opacity: .8;
+
+                            &:hover,
+                            &.active {
+                                border: 2px solid $main-color;
+                                opacity: 1;
+                            }
+
+                            @media screen and(max-width: 720px) {
+                                height: 60px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
